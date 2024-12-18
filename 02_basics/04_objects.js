@@ -49,3 +49,20 @@ console.log(Object.keys(insta))
 console.log(Object.values(insta))
 console.log(Object.entries(insta))
 console.log(insta.hasOwnProperty('email'))
+
+
+/*===================+++++++++ de-structure +++++++===================== */
+const course = {
+    courseName : "javascript",
+    price : 300,
+    courseIns : "hitesh"
+}
+
+//console.log(course.courseIns);
+
+
+/*============for clean code============ */
+
+const {courseName: Name} = course // here after using ":" we can change or replace key name 
+
+console.log(Name);

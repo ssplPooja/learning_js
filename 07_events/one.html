@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <ul id="images">
+        <li>
+            <img width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo0J6E3t1f-LsIqy_sgwody_oh3viUwV66Q&s" alt="photoshop" id="photoshop">
+        </li>
+        <li>
+            <img width="100px" height="100px" src="https://i0.wp.com/www.touristjapan.com/wp-content/uploads/2023/04/fujiyoshida-view-scaled-e1680427764989.jpg?resize=2000%2C800&ssl=1" alt="" id="japan">
+        </li>
+        <li>
+            <img width="100px" height="100px" src="https://t4.ftcdn.net/jpg/00/67/38/91/360_F_67389110_tpws3RYaj05FQKtDNuFgCjMZQ8vOQSY9.jpg" alt="" id="river">
+        </li>
+        <li>
+            <img width="100px" height="100px" src="https://cdn.britannica.com/29/181429-050-A2AFC966/Burrowing-owl.jpg" alt="" id="owl">
+        </li>
+        <li>
+            <img width="100px" height="100px" src="https://img.freepik.com/free-photo/spirituality-religion-hands-folded-prayer-holy-bible-church-concept-faith_1150-12945.jpg" alt="" id="prayer">
+        </li>
+        <li>
+            <a href="https://www.google.com/" style="color: white;">Google</a>
+        </li>
+    </ul>
+
+
+    <script>
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log("clicked inside the ul");
+            
+        // }, false)
+        // document.getElementById('owl').addEventListener('click', function(e){
+        //     console.log("click on owl");
+        //     e.stopPropagation()
+        // }, false)
+
+        document.querySelector('#images').addEventListener('click', function(e){
+            console.log(e.target.parentNode);
+            let img = e.target.tagName
+            if(img === 'IMG'){
+                let removeLi = e.target.parentNode
+                removeLi.remove()
+            }
+        }, false)
+    </script>
+
+
+//what is event propogation?
+//=> there is two context of event propogation
+//=> 1. event bubbling 
+//=> 2. event capturing
+</body>
+</html>

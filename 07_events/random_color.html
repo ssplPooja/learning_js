@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>change body color with click events</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+         // generate random color
+          const randomColor = function(){
+            const hex = "0123456789ABCDEF"
+            let color = "#"
+            //colorCode: #FFFFF (6)
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            return color;
+          }
+
+          let intervalId;
+          const startChangingColor = function(){
+
+            function changeBgColor(){
+                document.body.style.backgroundColor = randomColor()
+            }
+            if(intervalId == null){
+                intervalId = setInterval(changeBgColor, 1000)
+            }
+
+          }
+          const stopChangingColor = function(){
+            clearInterval(intervalId)
+            intervalId = null
+          }
+
+          document.querySelector('#start').addEventListener('click', startChangingColor)
+          document.querySelector('#stop').addEventListener('click', stopChangingColor)
+    </script>
+</body>
+</html>

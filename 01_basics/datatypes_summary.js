@@ -1,6 +1,6 @@
 /*========================= Primitve Datatypes============================= */
 //Que. What's is primitive DataTypes
-//Ans: It's a call by value datatypes means 
+//Ans: It's a call by value datatypes means when we copy these primitive DT then we don't have origional refer memory card
 
 /**
  1. String

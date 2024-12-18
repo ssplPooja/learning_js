@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-dark{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName){
+            const li = document.createElement("li");
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguage("python");
+        addLanguage("node js")
+
+
+        function addOptiLanguage(langName){
+            const li = document.createElement("li")
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector(".language").appendChild(li)
+        }
+        addOptiLanguage("golang")
+
+        //how to edit value (with replace and outerHTML method)
+         const secondLang = document.querySelector("li:nth-child(2)")
+         const newli = document.createElement("li")
+         newli.textContent= "mojo"
+         secondLang.replaceWith(newli)
+
+         const firstLang = document.querySelector("li:nth-child(1)")
+         firstLang.outerHTML = '<li>typeScript</li>'
+
+        //how to remove 
+        const lastLang = document.querySelector("li:last-child")
+        lastLang.remove()
+    </script>
+</body>
+</html>

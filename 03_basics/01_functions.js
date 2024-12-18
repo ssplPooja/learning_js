@@ -43,22 +43,29 @@ function loginUsername(username){
 
 /*===========================shopping cart======================= */
 
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){ // ... (rest operator) combine and get all the argument(calculateCartPrice) in "...num1" parameter
     return num1
 }
-
 // console.log(calculateCartPrice(200, 400, 500, "hghgh" ))
+
 
 const user = {
     item : "shampoo",
     price: 300
 }
 
-function handleOject(anyobject){
-    return `${anyobject.item} has price ${anyobject.price}`
+function handleObject(anyObject){
+    return `here is a item of ${anyObject.item} an the price is ${anyObject.price}`
 }
 
-console.log(handleOject({
-    item: "soap",
-    price: 500
-}))
+console.log(handleObject(user));
+
+
+// function handleOject(anyobject){
+//     return `${anyobject.item} has price ${anyobject.price}`
+// }
+
+// console.log(handleOject({
+//     item: "soap",
+//     price: 500
+// }))

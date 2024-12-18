@@ -38,4 +38,4 @@ const user = {
 
 const chai = (val1, val2) => ({username: "pooja"}) /*====================when we create an object then we should to wrap object in paranthesis */
 
-console.log(chai())
+// console.log(chai())

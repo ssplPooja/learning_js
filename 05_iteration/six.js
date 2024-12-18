@@ -26,32 +26,33 @@ const books = [
     { tile: "book six", genre: "non-fiction", publish: "1931", edition: "2005" },
     { tile: "book seven", genre: "fiction", publish: "1986", edition: "1989" }
 ]
-
 const userbooks = books.filter((bk) => bk.genre === "fiction")
 const userpublishbook = books.filter((bk) => bk.edition >= 2000 && bk.genre === "fiction")
-
 // console.log(userbooks)
 // console.log(userpublishbook)
 
 /* ================================== chaining with multiple method ==================== */
 const myNumber = [1,2,3,4,5,6,7,8,9,10]
+// const allNum = myNumber.map( (num) => {
+//     return num + 10
+// })
+// console.log(allNum);
 
-const addNum = myNumber
-                .map((num) => num * 10)
-                .map((num) => num - 1)
-                .filter((num) => num >= 30) // we can add or apply multiple methos on same time
 
+// const addNum = myNumber
+//                 .map((num) => num * 10)
+//                 .map((num) => num - 1)
+//                 .filter((num) => num >= 30) // we can add or apply multiple methos on same time
 // console.log(addNum)
 
 /* =============================== Reduce Method ============================ */
 const myArray = [0, 1, 2, 3]
-
-const total = myArray.reduce(function (acc, currval){
-    // console.log(`acc: ${acc} and currval: ${currval}`)
-    return acc + currval
-})
-
+// const total = myArray.reduce(function (acc, currval){
+//     console.log(`acc: ${acc} and currval: ${currval}`)
+//     return acc + currval
+// }, 4)
 // console.log(total)
+
 
 const course = [
     {itemname: "charger", price: 2999},
@@ -59,10 +60,8 @@ const course = [
     {itemname: "adapter", price: 1500},
     {itemname: "laptop", price: 40000},
 ]
-
 const result = course.reduce((acc, item) => {
     console.log(`acc: ${acc} and item: ${item.price}`)
     return acc + item.price
 }, 3)
-
 console.log(result)

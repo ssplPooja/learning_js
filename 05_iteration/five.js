@@ -39,7 +39,13 @@ const myCoding = [
     },
 ]
 
-myCoding.forEach( (item) => {
+const allCoding = myCoding.forEach( (item) => {
     console.log(item.languageFile)
+    return item
 })
 
+console.log(allCoding); 
+
+/*
+In forEach call back function values are never return but in filter call back function value are return but after satisfied the condition
+*/
